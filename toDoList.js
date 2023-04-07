@@ -7,7 +7,9 @@ let task;
 
 //clicking on the create button, calls on a function which creates an new item
 addButtonElement.addEventListener("click", () => {
-  createItem();
+  if (inputElement.value.length > 0) {
+    createItem();
+  }
 });
 
 //generates an item with from the input
