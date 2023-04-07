@@ -39,7 +39,7 @@ function createItem() {
   itemElement.addEventListener("click", () => {
     if (textElement.style.textDecoration !== "line-through") {
       textElement.style.textDecoration = "line-through";
-      textElement.style.color = "rgb(150,150,150)";
+      textElement.style.color = "rgb(200,200,200)";
     } else if (textElement.style.textDecoration === "line-through") {
       textElement.style.textDecoration = "none";
       textElement.style.color = "white";
