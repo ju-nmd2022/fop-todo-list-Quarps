@@ -9,8 +9,7 @@ body {
   grid-template-areas:
     "header"
     "main";
-  background-color: rgba(0, 0, 0, 1);
-  background-image: url("nicolas-jehly-VwIF0Ls7LVo-unsplash.jpg");
+  background-image: url("img/city.jpg");
   background-size: cover;
 }
 
@@ -113,7 +112,7 @@ input[type="text"],
   padding: 0.1rem;
   width: 35px;
   height: 35px;
-  background-image: url("delete-button.png");
+  background-image: url("img/delete-button.png");
   background-size: cover;
 }
 .item-button:hover {
