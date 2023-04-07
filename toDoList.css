@@ -1,0 +1,82 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 90px 90vh;
+  grid-template-areas:
+    "header"
+    "main";
+  background-color: rgba(0, 0, 0, 1);
+  background-image: url("nicolas-jehly-VwIF0Ls7LVo-unsplash.jpg");
+  background-size: cover;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". logo amount";
+  width: 100%;
+  grid-area: header;
+  justify-self: center;
+  align-items: center;
+  background-color: rgb(25, 25, 25);
+}
+
+.logo-container {
+  display: flex;
+  grid-area: logo;
+  justify-content: center;
+  height: 55px;
+}
+.amount-container {
+  display: flex;
+  color: white;
+  font-size: x-large;
+  justify-content: center;
+  grid-area: amount;
+}
+
+/* main content starts here*/
+main {
+  display: flex;
+  grid-area: main;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+/* next 25rows is code inspired by this youtube video, "https://www.youtube.com/watch?v=Hv0AiWFAiRg" */
+input[type="text"],
+button {
+  position: relative;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  width: 340px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+}
+
+button {
+  border-radius: 0 25px 25px 0;
+  width: 140px;
+  left: -5px;
+  color: white;
+  background-color: rgb(25, 25, 25);
+  cursor: pointer;
+  transition: 1s;
+}
+/* gradient created at and imported from this website, "https://cssgradient.io/" */
+button:hover {
+  background: rgb(122, 115, 22);
+  background: linear-gradient(
+    90deg,
+    rgba(122, 115, 22, 1) 0%,
+    rgba(122, 56, 0, 1) 69%
+  );
+  color: #f69107;
+}
