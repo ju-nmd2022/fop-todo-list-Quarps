@@ -2,27 +2,27 @@ const listElement = document.getElementById("list");
 const addButtonElement = document.getElementById("button");
 const inputElement = document.getElementById("input");
 
-let tasks = [];
-let task;
-
-//clicking on the create button, calls on a function which creates an new item
-addButtonElement.addEventListener("click", () => {
-  if (inputElement.value.length > 0) {
-    createItem();
-  }
-});
+function loadHandler() {
+  //clicking on the create button, calls on a function which creates an new item
+  addButtonElement.addEventListener("click", () => {
+    if (inputElement.value.length > 0) {
+      createItem();
+    }
+  });
+}
 
 //generates an item with from the input
 function createItem() {
+  //outerdiv
   const itemElement = document.createElement("div");
   itemElement.classList.add("item-div");
   listElement.appendChild(itemElement);
-
+  //text
   const textElement = document.createElement("p");
   textElement.classList.add("item-p");
   textElement.innerText = inputElement.value;
   itemElement.appendChild(textElement);
-
+  //button
   const buttonElement = document.createElement("button");
   buttonElement.classList.add("item-button");
   itemElement.appendChild(buttonElement);
@@ -90,3 +90,4 @@ function createItem() {
 
   checkListLength();
 }
+window.addEventListener("load", loadHandler);
